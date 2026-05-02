@@ -2,7 +2,24 @@
   "permissions": {
     "allow": [
       "Bash(cd:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(npm install *)",
+      "Bash(npx prisma *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__read_console_messages",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "mcp__Claude_in_Chrome__get_page_text",
+      "Bash(curl -s \"http://localhost:3000/_next/static/chunks/src_app_globals_0p2ml0n.css\")",
+      "Bash(taskkill /f /im node.exe)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)"
     ]
   }
 }

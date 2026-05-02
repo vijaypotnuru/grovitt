@@ -39,6 +39,7 @@ export function Nav() {
           <a href="#work">Work</a>
           <a href="#team">Studio</a>
           <a href="#insights">Journal</a>
+          <a href="/blogs">Blogs</a>
         </div>
         <a href="#contact" className="nav-cta">
           Start a project <span className="arr">&#x2197;</span>
