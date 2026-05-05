@@ -29,7 +29,24 @@
       "Bash(node -e \"require\\('@modelcontextprotocol/sdk/package.json'\\)\")",
       "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\);const p=JSON.parse\\(d\\);console.log\\(p.version\\)\")",
       "Bash(node -e \"console.log\\(require\\('D:/Grovitt-projects/grovitt/node_modules/@modelcontextprotocol/sdk/package.json'\\).version\\)\")",
-      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\);const r=JSON.parse\\(d\\);r.result.tools.forEach\\(t=>console.log\\(' •',t.name,'-',t.description.split\\('\\\\\\\\n'\\)[0]\\)\\)\")"
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\);const r=JSON.parse\\(d\\);r.result.tools.forEach\\(t=>console.log\\(' •',t.name,'-',t.description.split\\('\\\\\\\\n'\\)[0]\\)\\)\")",
+      "Bash(node -e \"const p=require\\('D:/Grovitt-projects/grovitt/node_modules/prisma/package.json'\\); console.log\\(JSON.stringify\\(Object.keys\\(p.exports||{}\\),null,2\\)\\)\")",
+      "Bash(node -e ':*)",
+      "Bash(curl:*)",
+      "Bash(node -e \"const pkg = require\\('@modelcontextprotocol/sdk/package.json'\\); console.log\\('SDK version:', pkg.version\\);\")",
+      "Bash(node -e \"const sdk = require\\('@modelcontextprotocol/sdk'\\); console.log\\(Object.keys\\(sdk\\).join\\('\\\\n'\\)\\);\")",
+      "Bash(node -e \"import\\('@modelcontextprotocol/sdk/package.json', {with: {type: 'json'}}\\).then\\(p => console.log\\('SDK:', p.default.version\\)\\).catch\\(e => console.log\\(e.message\\)\\)\")",
+      "Bash(node -e \"import\\('@modelcontextprotocol/sdk/server/mcp.js'\\).then\\(m => console.log\\(Object.keys\\(m\\).join\\('\\\\n'\\)\\)\\).catch\\(e => console.log\\(e.message\\)\\)\")",
+      "Bash(node -e \"import\\('@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js'\\).then\\(m => console.log\\(Object.keys\\(m\\).join\\('\\\\n'\\)\\)\\).catch\\(e => console.log\\(e.message\\)\\)\")",
+      "Bash(node -e \"import\\('@modelcontextprotocol/sdk/package.json', {with: {type: 'json'}}\\).then\\(p => console.log\\(p.default.version\\)\\).catch\\(e => console.log\\('err:', e.message\\)\\)\")",
+      "Bash(claude mcp:*)",
+      "Bash(node:*)",
+      "Bash(git push:*)",
+      "WebSearch",
+      "Bash(git check-ignore:*)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(ls D:/Grovitt-projects/grovitt/.env*)",
+      "Bash(npx next:*)"
     ]
   }
 }

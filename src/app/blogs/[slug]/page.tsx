@@ -64,7 +64,7 @@ function BlogDetailContent() {
               {date && <span>{date}</span>}
               {post.readTime && <span>{post.readTime} min read</span>}
             </div>
-            <h1 className="bd-title serif">{post.title}</h1>
+            <h1 className="bd-title sf-pro">{post.title}</h1>
             {post.excerpt && <p className="bd-excerpt">{post.excerpt}</p>}
           </div>
         </header>

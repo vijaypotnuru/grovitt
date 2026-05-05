@@ -36,7 +36,7 @@ function PostCard({ post, index }: { post: PostSummary; index: number }) {
           {date && <span>{date}</span>}
           {post.readTime && <span>{post.readTime} min read</span>}
         </div>
-        <h3 className="blog-card-title">{post.title}</h3>
+        <h3 className="blog-card-title sf-pro">{post.title}</h3>
         {post.excerpt && <p className="blog-card-excerpt">{post.excerpt}</p>}
         <span className="blog-card-link">
           Read article <span className="arr">&#x2197;</span>
