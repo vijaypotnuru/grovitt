@@ -68,10 +68,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: siteConfig.twitter,
+    creator: siteConfig.twitter,
     title: `${siteConfig.name} — Studio for Smarter Marketing & Real Growth`,
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },
+  verification: siteConfig.googleSiteVerification
+    ? { google: siteConfig.googleSiteVerification }
+    : undefined,
   robots: {
     index: true,
     follow: true,
@@ -82,9 +87,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
-  },
-  icons: {
-    icon: "/icon.svg",
   },
   category: "technology",
 };

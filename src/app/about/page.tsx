@@ -6,11 +6,20 @@ import { MegaMenu } from "@/components/mega-menu";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "Two studios, one outcome. We combine growth marketing and software engineering to help ambitious companies scale without compromise.",
+  keywords: [
+    "about grovitt",
+    "digital studio",
+    "growth marketing studio",
+    "software engineering studio",
+    "brand and performance agency",
+    "London digital agency",
+  ],
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About — Grovitt Studio",
@@ -21,6 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: "About — Grovitt Studio",
     description:
       "Two studios, one outcome. We combine growth marketing and software engineering to help ambitious companies scale without compromise.",
@@ -68,12 +78,18 @@ const team = [
 ];
 
 export default function AboutPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+  ]);
+
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
       <ScrollReveal />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
       <main className="svc-page">
 
         {/* ── Hero ── */}

@@ -17,10 +17,15 @@ import Insights from "@/components/insights";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import { AppWrapper } from "@/components/app-wrapper";
+import { localBusinessJsonLd } from "@/lib/jsonld";
 
 export default function Home() {
   return (
     <AppWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}
+      />
       <Nav />
       <MegaMenu />
       <CustomCursor />

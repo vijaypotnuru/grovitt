@@ -6,11 +6,23 @@ import { MegaMenu } from "@/components/mega-menu";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, serviceJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Desktop Software",
   description:
     "Native macOS, Windows, and Linux apps. Internal tooling, creative software, and cross-platform apps that feel at home on every OS.",
+  keywords: [
+    "desktop software development",
+    "macOS development",
+    "Windows app development",
+    "Linux development",
+    "Tauri development",
+    "Electron development",
+    "Swift development",
+    "WinUI development",
+    "cross-platform desktop apps",
+  ],
   alternates: { canonical: "/services/desktop-software" },
   openGraph: {
     title: "Desktop Software — Grovitt Studio",
@@ -21,6 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: "Desktop Software — Grovitt Studio",
     description:
       "Native macOS, Windows, and Linux apps. Internal tooling, creative software, and cross-platform apps that feel at home on every OS.",
@@ -142,12 +155,29 @@ const faqs = [
 ];
 
 export default function DesktopSoftwarePage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services/desktop-software" },
+    { name: "Desktop Software", path: "/services/desktop-software" },
+  ]);
+  const faqSchema = faqJsonLd(faqs);
+  const serviceSchema = serviceJsonLd({
+    name: "Desktop Software",
+    description:
+      "Native macOS, Windows, and Linux apps. Internal tooling, creative software, and cross-platform apps that feel at home on every OS.",
+    path: "/services/desktop-software",
+    category: "Engineering",
+  });
+
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
       <ScrollReveal />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(faqSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(serviceSchema)} />
       <main className="svc-page">
 
         {/* ── Hero ── */}

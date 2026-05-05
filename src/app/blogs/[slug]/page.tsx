@@ -8,6 +8,7 @@ import { CustomCursor } from "@/components/custom-cursor";
 import Footer from "@/components/footer";
 import { prisma } from "@/lib/prisma";
 import { siteConfig, absoluteUrl } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -77,6 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
+      site: "@grovittstudio",
       title: post.title,
       description,
       images: ["/opengraph-image"],
@@ -126,6 +128,12 @@ export default async function BlogDetailPage({ params }: Props) {
     image: [absoluteUrl("/opengraph-image")],
   };
 
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blogs" },
+    { name: post.title, path: `/blogs/${post.slug}` },
+  ]);
+
   return (
     <AppWrapper>
       <Nav />
@@ -135,6 +143,7 @@ export default async function BlogDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
       <main className="blog-detail-page">
         <article>
           <header className="bd-header">

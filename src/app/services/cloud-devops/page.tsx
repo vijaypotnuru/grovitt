@@ -6,11 +6,24 @@ import { MegaMenu } from "@/components/mega-menu";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, serviceJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Cloud & DevOps",
   description:
     "AWS, GCP, Azure. CI/CD, infrastructure-as-code, and monitoring that lets your team ship without fear.",
+  keywords: [
+    "cloud DevOps",
+    "AWS consulting",
+    "GCP services",
+    "Azure DevOps",
+    "CI/CD pipelines",
+    "infrastructure as code",
+    "Terraform",
+    "Kubernetes",
+    "cloud infrastructure",
+    "DevOps consulting",
+  ],
   alternates: { canonical: "/services/cloud-devops" },
   openGraph: {
     title: "Cloud & DevOps — Grovitt Studio",
@@ -21,6 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: "Cloud & DevOps — Grovitt Studio",
     description:
       "AWS, GCP, Azure. CI/CD, infrastructure-as-code, and monitoring that lets your team ship without fear.",
@@ -142,12 +156,29 @@ const faqs = [
 ];
 
 export default function CloudDevOpsPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services/cloud-devops" },
+    { name: "Cloud & DevOps", path: "/services/cloud-devops" },
+  ]);
+  const faqSchema = faqJsonLd(faqs);
+  const serviceSchema = serviceJsonLd({
+    name: "Cloud & DevOps",
+    description:
+      "AWS, GCP, Azure. CI/CD, infrastructure-as-code, and monitoring that lets your team ship without fear.",
+    path: "/services/cloud-devops",
+    category: "Engineering",
+  });
+
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
       <ScrollReveal />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(faqSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(serviceSchema)} />
       <main className="svc-page">
 
         {/* ── Hero ── */}

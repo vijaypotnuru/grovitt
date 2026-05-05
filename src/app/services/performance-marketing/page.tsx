@@ -6,11 +6,24 @@ import { MegaMenu } from "@/components/mega-menu";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, serviceJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Performance Marketing",
   description:
     "Search, paid social, and programmatic advertising orchestrated full-funnel and measured against blended CAC. Google, Meta, LinkedIn, TikTok, and more.",
+  keywords: [
+    "performance marketing",
+    "paid search",
+    "paid social",
+    "Google Ads",
+    "Meta Ads",
+    "LinkedIn Ads",
+    "TikTok advertising",
+    "programmatic advertising",
+    "CAC optimization",
+    "digital advertising agency",
+  ],
   alternates: { canonical: "/services/performance-marketing" },
   openGraph: {
     title: "Performance Marketing — Grovitt Studio",
@@ -21,6 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: "Performance Marketing — Grovitt Studio",
     description:
       "Search, paid social, and programmatic advertising orchestrated full-funnel and measured against blended CAC. Google, Meta, LinkedIn, TikTok, and more.",
@@ -142,12 +156,29 @@ const faqs = [
 ];
 
 export default function PerformanceMarketingPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services/performance-marketing" },
+    { name: "Performance Marketing", path: "/services/performance-marketing" },
+  ]);
+  const faqSchema = faqJsonLd(faqs);
+  const serviceSchema = serviceJsonLd({
+    name: "Performance Marketing",
+    description:
+      "Search, paid social, and programmatic advertising orchestrated full-funnel and measured against blended CAC.",
+    path: "/services/performance-marketing",
+    category: "Marketing",
+  });
+
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
       <ScrollReveal />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(faqSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(serviceSchema)} />
       <main className="svc-page">
 
         {/* ── Hero ── */}

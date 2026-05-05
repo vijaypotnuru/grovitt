@@ -6,11 +6,22 @@ import { MegaMenu } from "@/components/mega-menu";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, serviceJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Brand & Strategy",
   description:
     "Positioning, identity, and message architecture that makes everything downstream cheaper to run. Brand strategy for ambitious teams.",
+  keywords: [
+    "brand strategy",
+    "brand positioning",
+    "visual identity",
+    "messaging architecture",
+    "brand guidelines",
+    "go-to-market strategy",
+    "brand agency London",
+    "rebranding services",
+  ],
   alternates: { canonical: "/services/brand-strategy" },
   openGraph: {
     title: "Brand & Strategy — Grovitt Studio",
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: "Brand & Strategy — Grovitt Studio",
     description:
       "Positioning, identity, and message architecture that makes everything downstream cheaper to run. Brand strategy for ambitious teams.",
@@ -142,12 +154,29 @@ const faqs = [
 ];
 
 export default function BrandStrategyPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services/brand-strategy" },
+    { name: "Brand & Strategy", path: "/services/brand-strategy" },
+  ]);
+  const faqSchema = faqJsonLd(faqs);
+  const serviceSchema = serviceJsonLd({
+    name: "Brand & Strategy",
+    description:
+      "Positioning, identity, and message architecture that makes everything downstream cheaper to run.",
+    path: "/services/brand-strategy",
+    category: "Marketing",
+  });
+
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
       <ScrollReveal />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(faqSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(serviceSchema)} />
       <main className="svc-page">
 
         {/* ── Hero ── */}

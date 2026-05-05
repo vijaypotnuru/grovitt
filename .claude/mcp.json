@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "grovitt-blog-remote": {
+      "url": "https://grovitt.com/api/mcp",
+      "headers": {
+        "Authorization": "Bearer change-this-to-a-secret-key"
+      }
+    },
+    "grovitt-blog-local": {
+      "command": "npx",
+      "args": ["tsx", "mcp/server.ts"],
+      "cwd": "D:/Grovitt-projects/grovitt"
+    }
+  }
+}

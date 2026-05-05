@@ -8,6 +8,7 @@ export const siteConfig = {
   twitter: "@grovittstudio",
   email: "hello@grovitt.com",
   founded: "2013",
+  googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION ?? "",
 } as const;
 
 export function absoluteUrl(path = ""): string {

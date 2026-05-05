@@ -6,11 +6,22 @@ import { MegaMenu } from "@/components/mega-menu";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, serviceJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "SEO & Content",
   description:
     "Technical SEO, topical authority, and editorial content that ranks, converts, and compounds over time. Authority that pays for itself.",
+  keywords: [
+    "SEO services",
+    "technical SEO",
+    "content strategy",
+    "editorial production",
+    "programmatic SEO",
+    "link building",
+    "topical authority",
+    "search engine optimization agency",
+  ],
   alternates: { canonical: "/services/seo-content" },
   openGraph: {
     title: "SEO & Content — Grovitt Studio",
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: "SEO & Content — Grovitt Studio",
     description:
       "Technical SEO, topical authority, and editorial content that ranks, converts, and compounds over time. Authority that pays for itself.",
@@ -142,12 +154,29 @@ const faqs = [
 ];
 
 export default function SeoContentPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services/seo-content" },
+    { name: "SEO & Content", path: "/services/seo-content" },
+  ]);
+  const faqSchema = faqJsonLd(faqs);
+  const serviceSchema = serviceJsonLd({
+    name: "SEO & Content",
+    description:
+      "Technical SEO, topical authority, and editorial content that ranks, converts, and compounds over time.",
+    path: "/services/seo-content",
+    category: "Marketing",
+  });
+
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
       <ScrollReveal />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(faqSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(serviceSchema)} />
       <main className="svc-page">
 
         {/* ── Hero ── */}

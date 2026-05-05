@@ -8,6 +8,14 @@ const description =
 export const metadata: Metadata = {
   title: "Contact",
   description,
+  keywords: [
+    "contact grovitt",
+    "get in touch",
+    "digital agency contact",
+    "start a project",
+    "marketing agency enquiry",
+    "software development enquiry",
+  ],
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Contact — ${siteConfig.fullName}`,
@@ -17,6 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: `Contact — ${siteConfig.fullName}`,
     description,
   },

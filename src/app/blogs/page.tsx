@@ -7,11 +7,20 @@ import { CustomCursor } from "@/components/custom-cursor";
 import Footer from "@/components/footer";
 import { prisma } from "@/lib/prisma";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Blog — Insights on growth, brand, and product",
   description:
     "Insights on marketing, brand strategy, product, and the craft of building things that last. Articles from the Grovitt studio team.",
+  keywords: [
+    "growth marketing blog",
+    "brand strategy insights",
+    "SEO content articles",
+    "product engineering blog",
+    "digital studio blog",
+    "Grovitt blog",
+  ],
   alternates: { canonical: "/blogs" },
   openGraph: {
     title: `Blog — ${siteConfig.fullName}`,
@@ -22,6 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@grovittstudio",
     title: `Blog — ${siteConfig.fullName}`,
     description:
       "Insights on marketing, brand strategy, product, and the craft of building things that last.",
@@ -100,12 +110,17 @@ async function getPosts(): Promise<PostSummary[]> {
 
 export default async function BlogsPage() {
   const posts = await getPosts();
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blogs" },
+  ]);
 
   return (
     <AppWrapper>
       <Nav />
       <MegaMenu />
       <CustomCursor />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
       <main className="blogs-page">
         <section className="blogs-hero">
           <div className="wrap">
