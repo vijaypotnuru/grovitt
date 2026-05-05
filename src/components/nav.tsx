@@ -35,13 +35,12 @@ export function Nav() {
           >
             Services <span className="chev">&#x25BE;</span>
           </button>
-          <a href="#process">Process</a>
-          <a href="#work">Work</a>
-          <a href="#team">Studio</a>
-          <a href="#insights">Journal</a>
+          <a href="/work">Work</a>
+          <a href="/about">Studio</a>
           <a href="/blogs">Blogs</a>
+          <a href="/contact">Contact</a>
         </div>
-        <a href="#contact" className="nav-cta">
+        <a href="/contact" className="nav-cta">
           Start a project <span className="arr">&#x2197;</span>
         </a>
       </div>

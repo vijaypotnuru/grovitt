@@ -45,49 +45,49 @@ export function MegaMenu() {
           <div className="mega-col">
             <h6>(Capabilities)</h6>
             <div className="mega-services">
-              <a href="#" className="mega-svc">
+              <a href="/services/performance-marketing" className="mega-svc">
                 <span className="ms-num">01</span>
                 <div>
                   <div className="ms-title">Performance Marketing</div>
                   <div className="ms-desc">Search, paid social, programmatic.</div>
                 </div>
               </a>
-              <a href="#" className="mega-svc">
+              <a href="/services/seo-content" className="mega-svc">
                 <span className="ms-num">02</span>
                 <div>
                   <div className="ms-title">SEO &amp; Content</div>
                   <div className="ms-desc">Authority that compounds.</div>
                 </div>
               </a>
-              <a href="#" className="mega-svc">
+              <a href="/services/brand-strategy" className="mega-svc">
                 <span className="ms-num">03</span>
                 <div>
                   <div className="ms-title">Brand &amp; Strategy</div>
                   <div className="ms-desc">Positioning &amp; identity.</div>
                 </div>
               </a>
-              <a href="#" className="mega-svc">
+              <a href="/services/web-development" className="mega-svc">
                 <span className="ms-num">04</span>
                 <div>
                   <div className="ms-title">Web Development</div>
                   <div className="ms-desc">Marketing sites &amp; platforms.</div>
                 </div>
               </a>
-              <a href="#" className="mega-svc">
+              <a href="/services/mobile-apps" className="mega-svc">
                 <span className="ms-num">05</span>
                 <div>
                   <div className="ms-title">Mobile Apps</div>
                   <div className="ms-desc">iOS, Android, cross-platform.</div>
                 </div>
               </a>
-              <a href="#" className="mega-svc">
+              <a href="/services/desktop-software" className="mega-svc">
                 <span className="ms-num">06</span>
                 <div>
                   <div className="ms-title">Desktop Software</div>
                   <div className="ms-desc">Native &amp; cross-platform.</div>
                 </div>
               </a>
-              <a href="#" className="mega-svc">
+              <a href="/services/cloud-devops" className="mega-svc">
                 <span className="ms-num">07</span>
                 <div>
                   <div className="ms-title">Cloud &amp; DevOps</div>

@@ -130,7 +130,7 @@ const posts = [
       "Google's Gemini 1.5 Pro introduced a 1 million token context window — long enough to hold an entire codebase, a feature film, or a year of emails.",
     category: "AI",
     readTime: 6,
-    coverColor: "linear-gradient(135deg,#f5f1ea 30%,#1b2a6b)",
+    coverColor: "linear-gradient(135deg,#2c42a8,#0a0a0b)",
     published: true,
     publishedAt: new Date("2025-03-28"),
     content: `<p>When Google announced a 1 million token context window for Gemini 1.5 Pro, the immediate reaction from many developers was "okay, but what do I actually do with that?" It's a fair question. The answer, it turns out, is more interesting than the headline number.</p>
@@ -160,7 +160,7 @@ const posts = [
       "GitHub Copilot was just the beginning. The latest generation of AI coding tools can write tests, fix bugs, review PRs, and increasingly understand entire systems.",
     category: "Engineering",
     readTime: 7,
-    coverColor: "linear-gradient(135deg,#f5f1ea,#e8e2d6)",
+    coverColor: "linear-gradient(135deg,#1b2a6b,#ff6a1a)",
     published: true,
     publishedAt: new Date("2025-08-01"),
     content: `<p>GitHub Copilot launched in 2021 and changed how developers wrote code, line by line. What we're seeing in 2025 is categorically different — AI that understands entire systems, not just the next few lines of a function.</p>

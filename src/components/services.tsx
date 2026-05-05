@@ -19,7 +19,7 @@ export default function Services() {
         </div>
 
         <div className="svc-table" style={{ marginTop: 80 }}>
-          <div className="svc-row reveal">
+          <a href="/services/performance-marketing" className="svc-row reveal">
             <div className="svc-num">— 01</div>
             <div className="svc-title">Performance Marketing</div>
             <div className="svc-desc">
@@ -33,9 +33,9 @@ export default function Services() {
               <span className="svc-tag">TikTok</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
 
-          <div className="svc-row reveal">
+          <a href="/services/seo-content" className="svc-row reveal">
             <div className="svc-num">— 02</div>
             <div className="svc-title">SEO &amp; Content</div>
             <div className="svc-desc">
@@ -48,9 +48,9 @@ export default function Services() {
               <span className="svc-tag">Programmatic</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
 
-          <div className="svc-row reveal">
+          <a href="/services/brand-strategy" className="svc-row reveal">
             <div className="svc-num">— 03</div>
             <div className="svc-title">Brand &amp; Strategy</div>
             <div className="svc-desc">
@@ -63,9 +63,9 @@ export default function Services() {
               <span className="svc-tag">GTM</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
 
-          <div className="svc-row reveal">
+          <a href="/services/web-development" className="svc-row reveal">
             <div className="svc-num">— 04</div>
             <div className="svc-title">Web Development</div>
             <div className="svc-desc">
@@ -78,9 +78,9 @@ export default function Services() {
               <span className="svc-tag">Node</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
 
-          <div className="svc-row reveal">
+          <a href="/services/mobile-apps" className="svc-row reveal">
             <div className="svc-num">— 05</div>
             <div className="svc-title">Mobile Apps</div>
             <div className="svc-desc">
@@ -94,9 +94,9 @@ export default function Services() {
               <span className="svc-tag">Flutter</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
 
-          <div className="svc-row reveal">
+          <a href="/services/desktop-software" className="svc-row reveal">
             <div className="svc-num">— 06</div>
             <div className="svc-title">Desktop Software</div>
             <div className="svc-desc">
@@ -109,9 +109,9 @@ export default function Services() {
               <span className="svc-tag">Native</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
 
-          <div className="svc-row reveal">
+          <a href="/services/cloud-devops" className="svc-row reveal">
             <div className="svc-num">— 07</div>
             <div className="svc-title">Cloud &amp; DevOps</div>
             <div className="svc-desc">
@@ -124,7 +124,7 @@ export default function Services() {
               <span className="svc-tag">K8s</span>
             </div>
             <div className="svc-arrow">↗</div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

@@ -22,19 +22,19 @@ export default function Footer() {
             <h5>(Services)</h5>
             <ul>
               <li>
-                <a href="#">Digital marketing</a>
+                <a href="/services/performance-marketing">Digital marketing</a>
               </li>
               <li>
-                <a href="#">Web development</a>
+                <a href="/services/web-development">Web development</a>
               </li>
               <li>
-                <a href="#">Mobile apps</a>
+                <a href="/services/mobile-apps">Mobile apps</a>
               </li>
               <li>
-                <a href="#">Desktop software</a>
+                <a href="/services/desktop-software">Desktop software</a>
               </li>
               <li>
-                <a href="#">Cloud & DevOps</a>
+                <a href="/services/cloud-devops">Cloud &amp; DevOps</a>
               </li>
             </ul>
           </div>
@@ -42,19 +42,19 @@ export default function Footer() {
             <h5>(Studio)</h5>
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="/about">About</a>
               </li>
               <li>
-                <a href="#work">Work</a>
+                <a href="/work">Work</a>
               </li>
               <li>
-                <a href="#insights">Journal</a>
+                <a href="/blogs">Blogs</a>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <a href="/careers">Careers</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>

@@ -19,7 +19,17 @@
       "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
       "PowerShell(Stop-Process -Force)",
       "Bash(npm run *)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(npx tsc *)",
+      "Bash(head -n 3964 \"D:/Grovitt-projects/grovitt/src/app/globals.css\")",
+      "Bash(cp /tmp/globals_trimmed.css \"D:/Grovitt-projects/grovitt/src/app/globals.css\")",
+      "Bash(npx tsx *)",
+      "Bash(npx dotenv *)",
+      "Bash(node -e \"require\\('dotenv'\\).config\\(\\); require\\('child_process'\\).execSync\\('npx tsx prisma/seed.ts', {stdio:'inherit', env: process.env}\\)\")",
+      "Bash(node -e \"require\\('@modelcontextprotocol/sdk/package.json'\\)\")",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\);const p=JSON.parse\\(d\\);console.log\\(p.version\\)\")",
+      "Bash(node -e \"console.log\\(require\\('D:/Grovitt-projects/grovitt/node_modules/@modelcontextprotocol/sdk/package.json'\\).version\\)\")",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\);const r=JSON.parse\\(d\\);r.result.tools.forEach\\(t=>console.log\\(' •',t.name,'-',t.description.split\\('\\\\\\\\n'\\)[0]\\)\\)\")"
     ]
   }
 }
