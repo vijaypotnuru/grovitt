@@ -4,7 +4,7 @@
  * Deployed at: https://<your-domain>/api/mcp
  * Protocol:    MCP Streamable HTTP (stateless, works on Netlify serverless)
  * Auth:        Bearer token via MCP_API_KEY env var
- *              (skip auth in dev by leaving MCP_API_KEY unset)
+ *              (skip auth by leaving MCP_API_KEY unset)
  *
  * Connect any MCP-compatible agent to this URL.
  * See mcp/README.md for agent config examples.
@@ -15,20 +15,6 @@ import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/
 import { prisma } from "@/lib/prisma";
 import { registerTools } from "../../../../mcp/tools";
 
-// Re-used across warm invocations in the same Lambda container
-const globalForMcp = globalThis as unknown as {
-  mcpServer: McpServer | undefined;
-};
-
-function getServer(): McpServer {
-  if (!globalForMcp.mcpServer) {
-    const s = new McpServer({ name: "grovitt-blog", version: "1.0.0" });
-    registerTools(s, prisma);
-    globalForMcp.mcpServer = s;
-  }
-  return globalForMcp.mcpServer;
-}
-
 function unauthorized() {
   return new Response(
     JSON.stringify({ error: "Unauthorized — provide a valid Bearer token." }),
@@ -38,7 +24,7 @@ function unauthorized() {
 
 function checkAuth(req: Request): boolean {
   const apiKey = process.env.MCP_API_KEY;
-  if (!apiKey) return true; // auth disabled in dev
+  if (!apiKey) return true; // auth disabled when MCP_API_KEY is not set
   const header = req.headers.get("authorization") ?? "";
   return header === `Bearer ${apiKey}`;
 }
@@ -46,15 +32,33 @@ function checkAuth(req: Request): boolean {
 async function handle(req: Request): Promise<Response> {
   if (!checkAuth(req)) return unauthorized();
 
-  const transport = new WebStandardStreamableHTTPServerTransport({
-    sessionIdGenerator: undefined, // stateless — required for serverless
-  });
+  try {
+    // Create a fresh server + transport per request (stateless, no session management)
+    const mcpServer = new McpServer({ name: "grovitt-blog", version: "1.0.0" });
+    registerTools(mcpServer, prisma);
 
-  const server = getServer();
-  await server.connect(transport);
+    const transport = new WebStandardStreamableHTTPServerTransport({
+      sessionIdGenerator: undefined,
+    });
 
-  const response = await transport.handleRequest(req);
-  return response;
+    await mcpServer.connect(transport);
+    const response = await transport.handleRequest(req);
+    return response;
+  } catch (err) {
+    console.error("MCP handler error:", err);
+    return new Response(
+      JSON.stringify({
+        jsonrpc: "2.0",
+        error: {
+          code: -32603,
+          message: "Internal server error",
+          data: err instanceof Error ? err.message : String(err),
+        },
+        id: null,
+      }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  }
 }
 
 export const GET  = handle;
