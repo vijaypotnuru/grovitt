@@ -1,11 +1,126 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Fraunces, JetBrains_Mono } from "next/font/google";
 import { QueryProvider } from "@/components/query-provider";
+import { siteConfig, absoluteUrl } from "@/lib/site";
 import "./globals.css";
 
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+  axes: ["SOFT", "opsz"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Grovitt — Studio for Smarter Marketing & Real Growth",
-  description:
-    "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2013.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — Studio for Smarter Marketing & Real Growth`,
+    template: `%s — ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.fullName,
+  authors: [{ name: siteConfig.fullName, url: siteConfig.url }],
+  creator: siteConfig.fullName,
+  publisher: siteConfig.fullName,
+  keywords: [
+    "performance marketing",
+    "brand strategy",
+    "SEO and content",
+    "web development",
+    "mobile apps",
+    "cloud and DevOps",
+    "growth marketing studio",
+    "digital studio",
+    "Grovitt",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    siteName: siteConfig.fullName,
+    title: `${siteConfig.name} — Studio for Smarter Marketing & Real Growth`,
+    description: siteConfig.description,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.fullName,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — Studio for Smarter Marketing & Real Growth`,
+    description: siteConfig.description,
+    images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/icon.svg",
+  },
+  category: "technology",
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f1ea" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0b" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.fullName,
+  alternateName: siteConfig.name,
+  url: siteConfig.url,
+  logo: absoluteUrl("/icon.svg"),
+  email: siteConfig.email,
+  foundingDate: siteConfig.founded,
+  description: siteConfig.description,
+  sameAs: [] as string[],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.fullName,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  publisher: {
+    "@type": "Organization",
+    name: siteConfig.fullName,
+  },
 };
 
 export default function RootLayout({
@@ -14,16 +129,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..700,0..100;1,9..144,200..700,0..100&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      className={`${bricolage.variable} ${fraunces.variable} ${jetbrains.variable} scroll-smooth`}
+    >
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>

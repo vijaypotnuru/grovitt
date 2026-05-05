@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Performance Marketing — Grovitt Studio",
+  title: "Performance Marketing",
   description:
     "Search, paid social, and programmatic advertising orchestrated full-funnel and measured against blended CAC. Google, Meta, LinkedIn, TikTok, and more.",
+  alternates: { canonical: "/services/performance-marketing" },
+  openGraph: {
+    title: "Performance Marketing — Grovitt Studio",
+    description:
+      "Search, paid social, and programmatic advertising orchestrated full-funnel and measured against blended CAC. Google, Meta, LinkedIn, TikTok, and more.",
+    url: "/services/performance-marketing",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Performance Marketing — Grovitt Studio",
+    description:
+      "Search, paid social, and programmatic advertising orchestrated full-funnel and measured against blended CAC. Google, Meta, LinkedIn, TikTok, and more.",
+  },
 };
 
 const problems = [

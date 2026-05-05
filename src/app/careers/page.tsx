@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Careers — Grovitt Studio",
+  title: "Careers",
   description:
     "Join Grovitt Studio. We're hiring thoughtful engineers, marketers, and strategists who want ownership, craft, and real impact.",
+  alternates: { canonical: "/careers" },
+  openGraph: {
+    title: "Careers — Grovitt Studio",
+    description:
+      "Join Grovitt Studio. We're hiring thoughtful engineers, marketers, and strategists who want ownership, craft, and real impact.",
+    url: "/careers",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers — Grovitt Studio",
+    description:
+      "Join Grovitt Studio. We're hiring thoughtful engineers, marketers, and strategists who want ownership, craft, and real impact.",
+  },
 };
 
 const openRoles = [

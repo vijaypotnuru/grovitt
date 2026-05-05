@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "SEO & Content — Grovitt Studio",
+  title: "SEO & Content",
   description:
     "Technical SEO, topical authority, and editorial content that ranks, converts, and compounds over time. Authority that pays for itself.",
+  alternates: { canonical: "/services/seo-content" },
+  openGraph: {
+    title: "SEO & Content — Grovitt Studio",
+    description:
+      "Technical SEO, topical authority, and editorial content that ranks, converts, and compounds over time. Authority that pays for itself.",
+    url: "/services/seo-content",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO & Content — Grovitt Studio",
+    description:
+      "Technical SEO, topical authority, and editorial content that ranks, converts, and compounds over time. Authority that pays for itself.",
+  },
 };
 
 const problems = [

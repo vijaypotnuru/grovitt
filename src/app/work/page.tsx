@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Work — Grovitt Studio",
+  title: "Work",
   description:
     "Case studies from Grovitt Studio — marketing campaigns, web platforms, and software products built for ambitious companies.",
+  alternates: { canonical: "/work" },
+  openGraph: {
+    title: "Work — Grovitt Studio",
+    description:
+      "Case studies from Grovitt Studio — marketing campaigns, web platforms, and software products built for ambitious companies.",
+    url: "/work",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work — Grovitt Studio",
+    description:
+      "Case studies from Grovitt Studio — marketing campaigns, web platforms, and software products built for ambitious companies.",
+  },
 };
 
 const cases = [

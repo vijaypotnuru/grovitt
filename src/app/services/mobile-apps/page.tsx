@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Mobile Apps — Grovitt Studio",
+  title: "Mobile Apps",
   description:
     "iOS, Android, and cross-platform mobile apps. From MVP to flagship — shipped, polished, instrumented, and observable.",
+  alternates: { canonical: "/services/mobile-apps" },
+  openGraph: {
+    title: "Mobile Apps — Grovitt Studio",
+    description:
+      "iOS, Android, and cross-platform mobile apps. From MVP to flagship — shipped, polished, instrumented, and observable.",
+    url: "/services/mobile-apps",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile Apps — Grovitt Studio",
+    description:
+      "iOS, Android, and cross-platform mobile apps. From MVP to flagship — shipped, polished, instrumented, and observable.",
+  },
 };
 
 const problems = [

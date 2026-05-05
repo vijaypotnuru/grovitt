@@ -46,7 +46,9 @@
       "Bash(git check-ignore:*)",
       "Bash(echo \"exit: $?\")",
       "Bash(ls D:/Grovitt-projects/grovitt/.env*)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(git show-branch *)",
+      "Bash(awk 'BEGIN{open=0} {for\\(i=1;i<=length\\($0\\);i++\\){c=substr\\($0,i,1\\); if\\(c==\"{\"\\) open++; if\\(c==\"}\"\\) open--}} END{print \"balance:\", open}' D:/Grovitt-projects/grovitt/src/app/globals.css)"
     ]
   }
 }

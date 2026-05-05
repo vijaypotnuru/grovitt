@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Brand & Strategy — Grovitt Studio",
+  title: "Brand & Strategy",
   description:
     "Positioning, identity, and message architecture that makes everything downstream cheaper to run. Brand strategy for ambitious teams.",
+  alternates: { canonical: "/services/brand-strategy" },
+  openGraph: {
+    title: "Brand & Strategy — Grovitt Studio",
+    description:
+      "Positioning, identity, and message architecture that makes everything downstream cheaper to run. Brand strategy for ambitious teams.",
+    url: "/services/brand-strategy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brand & Strategy — Grovitt Studio",
+    description:
+      "Positioning, identity, and message architecture that makes everything downstream cheaper to run. Brand strategy for ambitious teams.",
+  },
 };
 
 const problems = [

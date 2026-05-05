@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "About — Grovitt Studio",
+  title: "About",
   description:
     "Two studios, one outcome. We combine growth marketing and software engineering to help ambitious companies scale without compromise.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — Grovitt Studio",
+    description:
+      "Two studios, one outcome. We combine growth marketing and software engineering to help ambitious companies scale without compromise.",
+    url: "/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — Grovitt Studio",
+    description:
+      "Two studios, one outcome. We combine growth marketing and software engineering to help ambitious companies scale without compromise.",
+  },
 };
 
 const values = [

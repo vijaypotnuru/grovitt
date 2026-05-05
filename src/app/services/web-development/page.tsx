@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Web Development — Grovitt Studio",
+  title: "Web Development",
   description:
     "Marketing sites, dashboards, and full web platforms. Modern stacks, careful architecture, and code your team can actually own.",
+  alternates: { canonical: "/services/web-development" },
+  openGraph: {
+    title: "Web Development — Grovitt Studio",
+    description:
+      "Marketing sites, dashboards, and full web platforms. Modern stacks, careful architecture, and code your team can actually own.",
+    url: "/services/web-development",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Development — Grovitt Studio",
+    description:
+      "Marketing sites, dashboards, and full web platforms. Modern stacks, careful architecture, and code your team can actually own.",
+  },
 };
 
 const problems = [

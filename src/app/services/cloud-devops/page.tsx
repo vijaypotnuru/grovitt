@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Cloud & DevOps — Grovitt Studio",
+  title: "Cloud & DevOps",
   description:
     "AWS, GCP, Azure. CI/CD, infrastructure-as-code, and monitoring that lets your team ship without fear.",
+  alternates: { canonical: "/services/cloud-devops" },
+  openGraph: {
+    title: "Cloud & DevOps — Grovitt Studio",
+    description:
+      "AWS, GCP, Azure. CI/CD, infrastructure-as-code, and monitoring that lets your team ship without fear.",
+    url: "/services/cloud-devops",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cloud & DevOps — Grovitt Studio",
+    description:
+      "AWS, GCP, Azure. CI/CD, infrastructure-as-code, and monitoring that lets your team ship without fear.",
+  },
 };
 
 const problems = [

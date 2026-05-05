@@ -8,9 +8,23 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Desktop Software — Grovitt Studio",
+  title: "Desktop Software",
   description:
     "Native macOS, Windows, and Linux apps. Internal tooling, creative software, and cross-platform apps that feel at home on every OS.",
+  alternates: { canonical: "/services/desktop-software" },
+  openGraph: {
+    title: "Desktop Software — Grovitt Studio",
+    description:
+      "Native macOS, Windows, and Linux apps. Internal tooling, creative software, and cross-platform apps that feel at home on every OS.",
+    url: "/services/desktop-software",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Desktop Software — Grovitt Studio",
+    description:
+      "Native macOS, Windows, and Linux apps. Internal tooling, creative software, and cross-platform apps that feel at home on every OS.",
+  },
 };
 
 const problems = [
