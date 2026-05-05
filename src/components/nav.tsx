@@ -2,6 +2,7 @@
 
 import { useEffect, useCallback } from "react";
 import { useAppContext } from "./app-wrapper";
+import { Logo } from "./logo";
 
 export function Nav() {
   const { toggleMega } = useAppContext();
@@ -24,8 +25,7 @@ export function Nav() {
     <nav className="top">
       <div className="nav-inner">
         <a href="#" className="brand">
-          grovitt
-          <span className="tail"></span>
+          <Logo width={140} height={44} />
         </a>
         <div className="nav-links">
           <button

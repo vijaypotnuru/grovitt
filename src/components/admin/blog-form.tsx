@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 
 export interface BlogFormData {
   title: string;
@@ -92,7 +93,7 @@ export function BlogForm({ initial, onSubmit, loading, submitLabel, backHref }: 
       <header className="admin-header">
         <div className="admin-header-inner">
           <div className="admin-brand">
-            <span className="serif admin-logo">grovitt</span>
+            <Logo width={110} height={34} />
             <span className="admin-badge mono">Admin</span>
           </div>
           <nav className="admin-nav">

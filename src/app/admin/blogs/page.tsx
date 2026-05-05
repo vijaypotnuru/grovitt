@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { Logo } from "@/components/logo";
 
 interface AdminPost {
   id: number;
@@ -57,7 +58,7 @@ export default function AdminBlogsPage() {
       <header className="admin-header">
         <div className="admin-header-inner">
           <div className="admin-brand">
-            <span className="serif admin-logo">grovitt</span>
+            <Logo width={110} height={34} />
             <span className="admin-badge mono">Admin</span>
           </div>
           <nav className="admin-nav">

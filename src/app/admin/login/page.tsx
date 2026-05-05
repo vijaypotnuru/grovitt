@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Logo } from "@/components/logo";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function AdminLoginPage() {
     <div className="admin-login-page">
       <form className="admin-login-card" onSubmit={handleSubmit}>
         <div className="al-brand">
-          <span className="serif al-logo">grovitt</span>
+          <Logo width={120} height={37} />
           <span className="al-tag mono">Admin</span>
         </div>
         <h1 className="al-title">Sign in</h1>

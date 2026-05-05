@@ -1,16 +1,13 @@
+import { Logo } from "./logo";
+
 export default function Footer() {
   return (
     <footer>
       <div className="wrap">
         <div className="foot-row">
           <div>
-            <a
-              href="#"
-              className="brand"
-              style={{ fontSize: 36, display: "inline-flex" }}
-            >
-              grovitt
-              <span className="tail"></span>
+            <a href="#" className="brand">
+              <Logo width={160} height={50} />
             </a>
             <p className="foot-tag" style={{ marginTop: 24 }}>
               A studio for <span className="it">smarter marketing</span> and{" "}
