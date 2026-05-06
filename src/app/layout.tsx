@@ -1,29 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Fraunces, JetBrains_Mono } from "next/font/google";
 import { QueryProvider } from "@/components/query-provider";
 import { siteConfig, absoluteUrl } from "@/lib/site";
 import "./globals.css";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-bricolage",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  axes: ["SOFT", "opsz"],
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jetbrains",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -133,7 +111,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${fraunces.variable} ${jetbrains.variable} scroll-smooth`}
+      className="scroll-smooth"
     >
       <body className="antialiased">
         <script

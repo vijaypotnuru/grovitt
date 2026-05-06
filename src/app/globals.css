@@ -13,16 +13,16 @@
   --line: rgba(245, 241, 234, 0.12);
   --line-strong: rgba(245, 241, 234, 0.2);
   --muted: rgba(245, 241, 234, 0.55);
-  --font-sans: var(--font-bricolage), system-ui, sans-serif;
-  --font-serif: var(--font-fraunces), serif;
-  --font-mono: var(--font-jetbrains), monospace;
+  --font-sans: "SF Pro Display", "SF Pro Text", "SF Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "SF Pro Display", "SF Pro Text", "SF Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "SF Pro", ui-monospace, "Cascadia Code", "JetBrains Mono", monospace;
 }
 
 @theme inline {
   --color-background: var(--ink);
   --color-foreground: var(--paper);
-  --font-sans: var(--font-bricolage), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), monospace;
+  --font-sans: "SF Pro Display", "SF Pro Text", "SF Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "SF Pro", ui-monospace, "Cascadia Code", "JetBrains Mono", monospace;
 }
 
 * {
@@ -77,12 +77,10 @@ button {
   font-family: var(--font-serif);
   font-weight: 300;
   letter-spacing: -0.02em;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .sf-pro {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   letter-spacing: -0.02em;
 }
@@ -346,7 +344,6 @@ nav.top.scrolled {
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .mega-intro h3 .it {
@@ -414,7 +411,6 @@ nav.top.scrolled {
   font-size: 24px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   line-height: 1.1;
   transition: 0.3s;
 }
@@ -462,7 +458,6 @@ nav.top.scrolled {
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-top: 14px;
-  font-variation-settings: "opsz" 144;
 }
 
 .mega-card .mc-arr {
@@ -556,7 +551,6 @@ nav.top.scrolled {
   line-height: 0.86;
   letter-spacing: -0.05em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .hero h1 .row {
@@ -902,7 +896,6 @@ nav.top.scrolled {
   color: var(--paper);
   white-space: nowrap;
   font-weight: 300;
-  font-variation-settings: "opsz" 144;
 }
 
 .tape-item .star {
@@ -944,7 +937,6 @@ section {
   line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   max-width: 1100px;
 }
 
@@ -960,7 +952,6 @@ section {
   font-size: clamp(36px, 5.6vw, 96px);
   line-height: 1.05;
   letter-spacing: -0.035em;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   color: rgba(245, 241, 234, 0.18);
   max-width: 1280px;
 }
@@ -1035,7 +1026,6 @@ section {
   letter-spacing: -0.03em;
   color: var(--paper);
   line-height: 1;
-  font-variation-settings: "opsz" 144;
 }
 
 .svc-row:hover .svc-title {
@@ -1172,7 +1162,6 @@ section {
   font-weight: 300;
   letter-spacing: -0.02em;
   margin-top: 8px;
-  font-variation-settings: "opsz" 144;
 }
 
 .proc-list {
@@ -1208,7 +1197,6 @@ section {
   letter-spacing: -0.03em;
   line-height: 1;
   color: var(--ink);
-  font-variation-settings: "opsz" 144;
 }
 
 .proc-item.active h4 {
@@ -1278,7 +1266,6 @@ section {
   letter-spacing: -0.05em;
   line-height: 0.85;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .stat .n .suf {
@@ -1360,7 +1347,6 @@ section {
   letter-spacing: -0.025em;
   line-height: 1.05;
   color: var(--ink);
-  font-variation-settings: "opsz" 144;
 }
 
 .work-row:hover h3 {
@@ -1375,7 +1361,6 @@ section {
   color: var(--orange);
   letter-spacing: -0.02em;
   line-height: 1;
-  font-variation-settings: "opsz" 144;
 }
 
 .work-row .stat-mini small {
@@ -1425,7 +1410,6 @@ section {
   font-size: 48px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.5);
-  font-variation-settings: "opsz" 144;
 }
 
 .wp-1 {
@@ -1480,7 +1464,6 @@ section {
   color: var(--ink);
   font-weight: 300;
   letter-spacing: -0.02em;
-  font-variation-settings: "opsz" 144;
   transition: 0.3s;
   border-right: 1px solid rgba(10, 10, 11, 0.08);
 }
@@ -1528,7 +1511,6 @@ section {
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   max-width: 1200px;
 }
 
@@ -1556,7 +1538,6 @@ section {
   font-size: 24px;
   background: var(--orange);
   color: var(--ink);
-  font-variation-settings: "opsz" 144;
 }
 
 .tst-quote b {
@@ -1668,7 +1649,6 @@ section {
   font-weight: 300;
   font-size: 120px;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   z-index: 1;
   position: relative;
 }
@@ -1706,7 +1686,6 @@ section {
   font-size: 24px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
 }
 
 .member-meta span {
@@ -1749,7 +1728,6 @@ section {
   letter-spacing: -0.02em;
   color: var(--paper);
   line-height: 1.15;
-  font-variation-settings: "opsz" 144;
 }
 
 .faq-item.open .faq-q {
@@ -1846,7 +1824,6 @@ section {
   bottom: -40px;
   right: 30px;
   font-weight: 200;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .post.p2 .ph .pdeco {
@@ -1880,7 +1857,6 @@ section {
   letter-spacing: -0.025em;
   color: var(--paper);
   line-height: 1.15;
-  font-variation-settings: "opsz" 144;
 }
 
 .post.feature h4 {
@@ -1908,7 +1884,6 @@ section {
   letter-spacing: -0.02em;
   max-width: 480px;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
 }
 
 .ct-info p .it {
@@ -1955,7 +1930,6 @@ section {
   font-size: 24px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
 }
 
 .ct-ch:hover b {
@@ -1988,7 +1962,6 @@ section {
   letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 8px;
-  font-variation-settings: "opsz" 144;
 }
 
 .form h3 .it {
@@ -2087,7 +2060,6 @@ section {
   text-align: center;
   padding: 120px 0 0;
   letter-spacing: -0.06em;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -2142,7 +2114,6 @@ footer {
   letter-spacing: -0.015em;
   color: var(--paper);
   max-width: 380px;
-  font-variation-settings: "opsz" 144;
 }
 
 .foot-tag .it {
@@ -2339,7 +2310,6 @@ footer {
   letter-spacing: -0.05em;
   color: var(--paper);
   font-weight: 300;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .blogs-hero-head h1 .it {
@@ -2432,7 +2402,6 @@ footer {
   font-size: 220px;
   line-height: 0.8;
   color: rgba(245, 241, 234, 0.18);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   user-select: none;
 }
 
@@ -2537,7 +2506,6 @@ footer {
   font-size: 40px;
   letter-spacing: -0.02em;
   color: var(--muted);
-  font-variation-settings: "opsz" 144;
 }
 
 .blogs-empty .it {
@@ -2631,7 +2599,6 @@ footer {
   color: var(--paper);
   line-height: 1.05;
   margin: 64px 0 24px;
-  font-variation-settings: "opsz" 144;
 }
 
 .bd-content h3 {
@@ -2641,7 +2608,6 @@ footer {
   letter-spacing: -0.02em;
   color: var(--paper);
   margin: 48px 0 18px;
-  font-variation-settings: "opsz" 144;
 }
 
 .bd-content p {
@@ -2668,7 +2634,6 @@ footer {
   font-style: italic;
   font-size: 1.05em;
   color: var(--orange);
-  font-variation-settings: "opsz" 144;
 }
 
 .bd-content blockquote {
@@ -2682,7 +2647,6 @@ footer {
   letter-spacing: -0.02em;
   color: var(--paper);
   font-style: italic;
-  font-variation-settings: "opsz" 144;
 }
 
 .bd-content ul,
@@ -2781,7 +2745,6 @@ footer {
   font-size: 64px;
   letter-spacing: -0.03em;
   font-weight: 300;
-  font-variation-settings: "opsz" 144;
 }
 
 .bd-not-found .it {
@@ -2906,7 +2869,6 @@ footer {
   font-size: 36px;
   letter-spacing: -0.025em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
 }
 
 .admin-sub {
@@ -3130,7 +3092,6 @@ footer {
   font-size: 36px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   margin-top: 8px;
 }
 
@@ -3407,7 +3368,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   line-height: 0.92;
   letter-spacing: -0.05em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .svc-hero h1 em {
@@ -3484,7 +3444,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-size: 26px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   line-height: 1.1;
   margin-bottom: 12px;
 }
@@ -3536,7 +3495,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   letter-spacing: -0.04em;
   color: var(--orange);
   line-height: 1;
-  font-variation-settings: "opsz" 144;
 }
 
 .svc-stat-label {
@@ -3579,7 +3537,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-size: 28px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   margin-bottom: 10px;
   line-height: 1.1;
 }
@@ -3603,7 +3560,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
   margin-bottom: 28px;
 }
 
@@ -3682,7 +3638,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-size: clamp(22px, 2.4vw, 30px);
   letter-spacing: -0.025em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   line-height: 1.15;
   margin-bottom: 16px;
 }
@@ -3740,7 +3695,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   letter-spacing: -0.04em;
   color: var(--ink);
   line-height: 1;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .svc-result-label {
@@ -3817,7 +3771,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-size: 28px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   line-height: 1.1;
   margin-bottom: 10px;
 }
@@ -3889,7 +3842,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-size: 22px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   line-height: 1.2;
   margin-bottom: 12px;
 }
@@ -4061,7 +4013,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: 16px;
-  font-variation-settings: "opsz" 144;
   line-height: 1.15;
 }
 
@@ -4400,7 +4351,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-weight: 300;
   font-size: clamp(28px, 3.5vw, 48px);
   letter-spacing: -0.03em;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
 .contact-success p {
@@ -4566,7 +4516,6 @@ input[type="datetime-local"] { color-scheme: dark; }
   font-size: 32px;
   letter-spacing: -0.02em;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
   border-bottom: 1px solid var(--line);
   transition: color 0.2s, padding 0.25s;
   -webkit-tap-highlight-color: transparent;
