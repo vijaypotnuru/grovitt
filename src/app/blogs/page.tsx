@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-dynamic";
+
 const COVER_GRADIENTS = [
   "linear-gradient(135deg,#ff8a3d,#c4400a)",
   "linear-gradient(135deg,#1b2a6b,#0a0a0b)",
