@@ -547,7 +547,7 @@ nav.top.scrolled {
 .hero h1 {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(72px, 12vw, 200px);
+  font-size: clamp(60px, 10vw, 160px);
   line-height: 0.86;
   letter-spacing: -0.05em;
   color: var(--paper);

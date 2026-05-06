@@ -2,7 +2,7 @@
 
 Two transports — **stdio** for local agents, **HTTP** for any remote agent.
 
-**Live endpoint:** `https://grovitt.com/api/mcp`
+**Live endpoint:** `https://grovitt.com/api/mcp` (open access, no auth required)
 
 ---
 
@@ -40,8 +40,7 @@ The MCP server is live at:
 https://grovitt.com/api/mcp
 ```
 
-Set `MCP_API_KEY` in Netlify → Environment variables, then use that value
-as the Bearer token in whichever agent you're connecting.
+No authentication required — any MCP-compatible agent can connect directly.
 
 ### Claude Desktop
 
@@ -52,10 +51,7 @@ Edit `%APPDATA%\Claude\claude_desktop_config.json`
 {
   "mcpServers": {
     "grovitt-blog": {
-      "url": "https://grovitt.com/api/mcp",
-      "headers": {
-        "Authorization": "Bearer YOUR_MCP_API_KEY"
-      }
+      "url": "https://grovitt.com/api/mcp"
     }
   }
 }
@@ -68,7 +64,6 @@ Restart Claude Desktop → 🔌 MCP icon appears in the chat bar.
 1. Open a Claude.ai Project
 2. **Settings → Integrations → Add MCP server**
 3. URL: `https://grovitt.com/api/mcp`
-4. Header — Key: `Authorization` · Value: `Bearer YOUR_MCP_API_KEY`
 
 ### Cursor (remote MCP)
 
@@ -78,10 +73,7 @@ Restart Claude Desktop → 🔌 MCP icon appears in the chat bar.
 {
   "mcpServers": {
     "grovitt-blog": {
-      "url": "https://grovitt.com/api/mcp",
-      "headers": {
-        "Authorization": "Bearer YOUR_MCP_API_KEY"
-      }
+      "url": "https://grovitt.com/api/mcp"
     }
   }
 }
@@ -91,7 +83,6 @@ Restart Claude Desktop → 🔌 MCP icon appears in the chat bar.
 
 ```
 POST https://grovitt.com/api/mcp
-Authorization: Bearer YOUR_MCP_API_KEY
 Content-Type: application/json
 ```
 
@@ -131,15 +122,6 @@ Useful for development or when you want direct DB access without HTTP.
   }
 }
 ```
-
----
-
-## Netlify setup checklist
-
-- [ ] Go to **Netlify → grovitt.com → Environment variables**
-- [ ] Add `MCP_API_KEY` = a strong random string (e.g. 32+ chars)
-- [ ] Redeploy the site so the new env var takes effect
-- [ ] Paste the same value as `YOUR_MCP_API_KEY` in your agent config
 
 ---
 
