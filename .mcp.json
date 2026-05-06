@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "grovitt-blog": {
+      "url": "http://localhost:3000/api/mcp"
+    }
+  }
+}

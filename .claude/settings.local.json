@@ -1,4 +1,5 @@
 {
+  "enabledMcpjsonServers": ["grovitt-blog"],
   "permissions": {
     "allow": [
       "Bash(cd:*)",
