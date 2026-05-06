@@ -79,6 +79,46 @@ Restart Claude Desktop → 🔌 MCP icon appears in the chat bar.
 }
 ```
 
+### Windsurf
+
+`~/.windsurf/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "grovitt-blog": {
+      "url": "https://grovitt.com/api/mcp"
+    }
+  }
+}
+```
+
+### Cline (VS Code Extension)
+
+In Cline settings, add an MCP server:
+- **Name:** `grovitt-blog`
+- **Transport:** `HTTP`
+- **URL:** `https://grovitt.com/api/mcp`
+
+### Continue (VS Code/JetBrains Extension)
+
+`.continue/config.json`:
+
+```json
+{
+  "experimental": {
+    "modelContextProtocolServers": [
+      {
+        "transport": {
+          "type": "http",
+          "url": "https://grovitt.com/api/mcp"
+        }
+      }
+    ]
+  }
+}
+```
+
 ### Any other agent (Anthropic SDK, LangChain, custom)
 
 ```
