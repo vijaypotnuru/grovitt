@@ -88,7 +88,12 @@ const organizationJsonLd = {
   email: siteConfig.email,
   foundingDate: siteConfig.founded,
   description: siteConfig.description,
-  sameAs: [] as string[],
+  sameAs: [
+    "https://x.com/grovitt",
+    "https://www.facebook.com/Grovitt",
+    "http://linkedin.com/company/grovitt",
+    "https://www.youtube.com/@Grovitt",
+  ],
 };
 
 const websiteJsonLd = {
