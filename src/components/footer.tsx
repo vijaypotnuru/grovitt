@@ -7,12 +7,12 @@ export default function Footer() {
         <div className="foot-row">
           <div>
             <a href="#" className="brand">
-              <Logo width={160} height={50} />
+              <Logo width={78} height={25} />
             </a>
             <p className="foot-tag" style={{ marginTop: 24 }}>
               A studio for <span className="it">smarter marketing</span> and{" "}
               <span className="it">real growth</span> — campaigns and software,
-              side by side, since 2013.
+              side by side, since 2026.
             </p>
           </div>
           <div className="foot-col">
@@ -59,19 +59,16 @@ export default function Footer() {
             <h5>(Connect)</h5>
             <ul>
               <li>
-                <a href="#">LinkedIn</a>
+                <a href="https://x.com/grovitt" target="_blank" rel="noopener noreferrer">Twitter / X</a>
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <a href="https://www.facebook.com/Grovitt" target="_blank" rel="noopener noreferrer">Facebook</a>
               </li>
               <li>
-                <a href="#">Twitter / X</a>
+                <a href="http://linkedin.com/company/grovitt" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </li>
               <li>
-                <a href="#">Dribbble</a>
-              </li>
-              <li>
-                <a href="#">GitHub</a>
+                <a href="https://www.youtube.com/@Grovitt" target="_blank" rel="noopener noreferrer">YouTube</a>
               </li>
             </ul>
           </div>
