@@ -81,7 +81,7 @@ export default function Contact() {
               </a>
               <a className="ct-ch" href="#">
                 <small>(Studios)</small>
-                <b>SF · Bengaluru</b>
+                <b>SF · Hyderabad</b>
                 <span className="arr">↗</span>
               </a>
               <a className="ct-ch" href="#">

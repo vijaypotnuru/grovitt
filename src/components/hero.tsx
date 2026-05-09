@@ -70,9 +70,9 @@ export default function Hero() {
         <div className="hero-meta-top">
           <div className="left">
             <span>
-              Est. <b>2013</b>
+              Est. <b>2026</b>
             </span>
-            <span>SF · Bengaluru</span>
+            <span>SF · Hyderabad</span>
           </div>
           <div className="right">
             <span>(01) Marketing studio</span>
@@ -113,7 +113,7 @@ export default function Hero() {
             >
               brand, performance, and product
             </em>{" "}
-            — building campaigns and software for ambitious teams since 2013.
+            — building campaigns and software for ambitious teams since 2026.
           </div>
           <div className="col-cta">
             <a href="#contact" className="btn-magnetic">

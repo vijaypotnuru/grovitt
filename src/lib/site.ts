@@ -4,10 +4,10 @@ export const siteConfig = {
   url: "https://grovitt.com",
   ogImage: "/opengraph-image",
   description:
-    "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2013.",
+    "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2026.",
   twitter: "@grovittstudio",
   email: "hello@grovitt.com",
-  founded: "2013",
+  founded: "2026",
   googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION ?? "",
 } as const;
 

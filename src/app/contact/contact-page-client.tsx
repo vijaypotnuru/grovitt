@@ -105,6 +105,52 @@ export default function ContactPageClient() {
           </div>
         </section>
 
+        {/* ── Google Meet scheduling ── */}
+        {process.env.NEXT_PUBLIC_GCAL_MEET_URL ? (
+          <section className="contact-section" style={{ paddingBottom: 0 }}>
+            <div className="wrap">
+              <div className="contact-layout">
+                <div className="contact-info reveal">
+                  <div className="sec-num"><span>(Meet)</span></div>
+                  <div className="contact-info-list">
+                    <div className="contact-info-item" style={{ borderTop: "1px solid var(--line)" }}>
+                      <div className="contact-info-label">Video call</div>
+                      <div className="contact-info-value">Google Meet</div>
+                    </div>
+                    <div className="contact-info-item">
+                      <div className="contact-info-label">Duration</div>
+                      <div className="contact-info-value">30 minutes</div>
+                    </div>
+                  </div>
+                  <div className="contact-reassure">
+                    <p>
+                      Pick a slot that works for you. You&apos;ll get a Google Meet link
+                      instantly — no back-and-forth emails.
+                    </p>
+                  </div>
+                </div>
+                <div className="contact-form-wrap reveal reveal-d1">
+                  <div className="svc-faq-q" style={{ marginBottom: 32, fontStyle: "normal", fontSize: "clamp(24px, 3vw, 40px)" }}>
+                    Or schedule a call directly
+                  </div>
+                  <iframe
+                    src={process.env.NEXT_PUBLIC_GCAL_MEET_URL}
+                    style={{
+                      width: "100%",
+                      height: 520,
+                      border: "1px solid var(--line-strong)",
+                      borderRadius: 12,
+                      background: "var(--bg)",
+                    }}
+                    scrolling="no"
+                    title="Schedule a Google Meet"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {/* ── Form section ── */}
         <section className="contact-section">
           <div className="wrap">

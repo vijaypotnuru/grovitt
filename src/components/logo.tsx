@@ -7,7 +7,7 @@ interface LogoProps {
   className?: string;
 }
 
-export function Logo({ width = 140, height = 44, className }: LogoProps) {
+export function Logo({ width = 65, height = 20, className }: LogoProps) {
   return (
     <Image
       src={logoSrc}

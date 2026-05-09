@@ -27,7 +27,7 @@ export function Nav() {
       <nav className="top">
         <div className="nav-inner">
           <a href="/" className="brand" aria-label="Grovitt — home">
-            <Logo width={140} height={44} />
+            <Logo width={65} height={20} />
           </a>
           <div className="nav-links">
             <button

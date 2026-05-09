@@ -61,7 +61,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2013", label: "Founded in London as a performance marketing consultancy" },
+  { year: "2026", label: "Founded in London as a performance marketing consultancy" },
   { year: "2016", label: "Opened software studio to serve clients requesting custom tooling" },
   { year: "2019", label: "Expanded to New York — team grew to 24 full-time specialists" },
   { year: "2022", label: "Merged marketing and engineering into a single integrated studio" },
@@ -110,11 +110,11 @@ export default function AboutPage() {
               <div className="svc-hero-right reveal reveal-d1">
                 <p className="svc-hero-sub">
                   Grovitt was built on a simple thesis: growth marketing and software
-                  engineering are stronger together than apart. Since 2013 we&apos;ve
+                  engineering are stronger together than apart. Since 2026 we&apos;ve
                   helped ambitious companies prove it.
                 </p>
                 <div className="svc-hero-tags">
-                  {["Founded 2013", "London & New York", "180+ Clients", "14 Countries"].map((t) => (
+                  {["Founded 2026", "London & New York", "180+ Clients", "14 Countries"].map((t) => (
                     <span key={t} className="svc-tag">{t}</span>
                   ))}
                 </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
               </div>
               <div className="about-prose reveal reveal-d1">
                 <p>
-                  We started as a performance marketing consultancy in 2013, frustrated by a
+                  We started as a performance marketing consultancy in 2026, frustrated by a
                   consistent pattern: great campaigns undermined by weak product experiences.
                   Traffic that converted nowhere. Landing pages that loaded in four seconds.
                   Dashboards that gave clients no visibility into what was actually working.

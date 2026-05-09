@@ -82,7 +82,7 @@ export function MobileNav() {
 
           <div className="mobile-nav-foot">
             <a href="mailto:hello@grovitt.com">hello@grovitt.com</a>
-            <span>Est. 2013</span>
+            <span>Est. 2026</span>
           </div>
         </div>
       </aside>

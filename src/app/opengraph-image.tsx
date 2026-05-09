@@ -69,7 +69,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.3,
             }}
           >
-            Brand, performance, and product — for ambitious teams since 2013.
+            Brand, performance, and product — for ambitious teams since 2026.
           </div>
         </div>
 
@@ -86,7 +86,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>Grovitt Studio</span>
-          <span>est. 2013</span>
+          <span>est. 2026</span>
         </div>
       </div>
     ),

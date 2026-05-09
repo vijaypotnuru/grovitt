@@ -71,9 +71,9 @@ export function localBusinessJsonLd() {
     logo: absoluteUrl("/icon.svg"),
     image: absoluteUrl("/opengraph-image"),
     description:
-      "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2013.",
+      "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2026.",
     email: "hello@grovitt.com",
-    foundingDate: "2013",
+    foundingDate: "2026",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Shoreditch, EC2A",

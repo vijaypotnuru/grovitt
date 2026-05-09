@@ -101,7 +101,7 @@ export default function Stats() {
               <span className="suf">+</span>
             </div>
             <div className="desc">
-              Founded in 2013, working across 14 industries.
+              Founded in 2026, working across 14 industries.
             </div>
           </div>
 
