@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           We provide digital marketing, web development, mobile app development, and related
           technology services. You can reach us at{" "}
           <a href="mailto:veera@grovitt.com">veera@grovitt.com</a> or{" "}
-          <a href="mailto:hello@grovitt.com">hello@grovitt.com</a>.
+          <a href="mailto:contact@grovitt.com">contact@grovitt.com</a>.
         </p>
       </Section>
 
@@ -98,7 +98,7 @@ export default function PrivacyPage() {
         <p>
           Questions about this policy? Write to us at{" "}
           <a href="mailto:veera@grovitt.com">veera@grovitt.com</a> or{" "}
-          <a href="mailto:hello@grovitt.com">hello@grovitt.com</a>.
+          <a href="mailto:contact@grovitt.com">contact@grovitt.com</a>.
         </p>
       </Section>
     </main>

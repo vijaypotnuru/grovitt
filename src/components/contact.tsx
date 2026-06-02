@@ -74,9 +74,9 @@ export default function Contact() {
                 <b>veera@grovitt.com</b>
                 <span className="arr">↗</span>
               </a>
-              <a className="ct-ch" href="mailto:hello@grovitt.com">
+              <a className="ct-ch" href="mailto:contact@grovitt.com">
                 <small>(Email)</small>
-                <b>hello@grovitt.com</b>
+                <b>contact@grovitt.com</b>
                 <span className="arr">↗</span>
               </a>
               <a className="ct-ch" href="tel:+919398676662">

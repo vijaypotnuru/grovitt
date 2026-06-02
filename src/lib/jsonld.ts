@@ -72,7 +72,7 @@ export function localBusinessJsonLd() {
     image: absoluteUrl("/opengraph-image"),
     description:
       "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2024.",
-    email: "hello@grovitt.com",
+    email: "contact@grovitt.com",
     telephone: ["+91-8639444404", "+91-9398676662"],
     foundingDate: "2024",
     address: {
