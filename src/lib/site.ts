@@ -8,7 +8,7 @@ export const siteConfig = {
   twitter: "@grovittstudio",
   email: "hello@grovitt.com",
   founded: "2024",
-  telephone: "+91-8639444404",
+  telephone: ["+91-8639444404", "+91-9398676662"],
   address: {
     streetAddress: "H. No. 16, 9th Phase Rd, Kukatpally Housing Board Colony, K P H B Phase 9",
     addressLocality: "Hyderabad",

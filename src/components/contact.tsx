@@ -79,6 +79,11 @@ export default function Contact() {
                 <b>hello@grovitt.com</b>
                 <span className="arr">↗</span>
               </a>
+              <a className="ct-ch" href="tel:+919398676662">
+                <small>(Mobile)</small>
+                <b>+91 93986 76662</b>
+                <span className="arr">↗</span>
+              </a>
               <a className="ct-ch" href="tel:+918639444404">
                 <small>(Phone)</small>
                 <b>+91 86394 44404</b>
