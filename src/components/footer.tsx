@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Logo } from "./logo";
 
 export default function Footer() {
@@ -77,7 +78,11 @@ export default function Footer() {
           <span>
             &copy; 2026 <b>Grovitt Studio</b> &middot; All rights reserved
           </span>
-          <span>Privacy &middot; Terms &middot; Cookies</span>
+          <span style={{ display: "flex", gap: 16 }}>
+            <Link href="/privacy" style={{ color: "inherit", textDecoration: "none" }}>Privacy</Link>
+            <Link href="/unsubscribe" style={{ color: "inherit", textDecoration: "none" }}>Unsubscribe</Link>
+            <Link href="/contact" style={{ color: "inherit", textDecoration: "none" }}>Contact</Link>
+          </span>
         </div>
       </div>
     </footer>

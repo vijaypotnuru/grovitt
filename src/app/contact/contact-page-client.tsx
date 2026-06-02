@@ -162,9 +162,10 @@ export default function ContactPageClient() {
 
                 <div className="contact-info-list">
                   {[
+                    { label: "Primary", value: "veera@grovitt.com", href: "mailto:veera@grovitt.com" },
                     { label: "Email", value: "hello@grovitt.com", href: "mailto:hello@grovitt.com" },
-                    { label: "London", value: "Shoreditch, EC2A" },
-                    { label: "New York", value: "SoHo, NY 10012" },
+                    { label: "Rajamahendravaram", value: "D.no: 29-12-6, Devi Chowk Circle, Lakshmivarapu Pet" },
+                    { label: "Phone", value: "+91 86394 44404", href: "tel:+918639444404" },
                   ].map((item) => (
                     <div key={item.label} className="contact-info-item">
                       <div className="contact-info-label">{item.label}</div>

@@ -71,16 +71,20 @@ export function localBusinessJsonLd() {
     logo: absoluteUrl("/icon.svg"),
     image: absoluteUrl("/opengraph-image"),
     description:
-      "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2026.",
+      "A digital studio at the intersection of brand, performance, and product — building campaigns and software for ambitious teams since 2024.",
     email: "hello@grovitt.com",
-    foundingDate: "2026",
+    telephone: "+91-8639444404",
+    foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Shoreditch, EC2A",
-      addressLocality: "London",
-      addressCountry: "GB",
+      streetAddress: "D.no: 29-12-6, Devi Chowk Circle, Lakshmivarapu Pet",
+      addressLocality: "Rajamahendravaram",
+      addressRegion: "AP",
+      postalCode: "533101",
+      addressCountry: "IN",
     },
-    priceRange: "£10k – £100k+",
+    openingHours: "Mo-Sa 09:00-18:00",
+    priceRange: "₹1L – ₹1Cr+",
     sameAs: [] as string[],
   };
 }

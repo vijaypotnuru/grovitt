@@ -69,14 +69,19 @@ export default function Contact() {
               anything else.
             </p>
             <div className="ct-channels">
+              <a className="ct-ch" href="mailto:veera@grovitt.com">
+                <small>(Primary)</small>
+                <b>veera@grovitt.com</b>
+                <span className="arr">↗</span>
+              </a>
               <a className="ct-ch" href="mailto:hello@grovitt.com">
                 <small>(Email)</small>
                 <b>hello@grovitt.com</b>
                 <span className="arr">↗</span>
               </a>
-              <a className="ct-ch" href="tel:+14155550142">
+              <a className="ct-ch" href="tel:+918639444404">
                 <small>(Phone)</small>
-                <b>+1 415 555 0142</b>
+                <b>+91 86394 44404</b>
                 <span className="arr">↗</span>
               </a>
               <a className="ct-ch" href="#">
