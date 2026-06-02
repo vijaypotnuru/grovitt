@@ -164,7 +164,7 @@ export default function ContactPageClient() {
                   {[
                     { label: "Primary", value: "veera@grovitt.com", href: "mailto:veera@grovitt.com" },
                     { label: "Email", value: "hello@grovitt.com", href: "mailto:hello@grovitt.com" },
-                    { label: "Rajamahendravaram", value: "D.no: 29-12-6, Devi Chowk Circle, Lakshmivarapu Pet" },
+                    { label: "Hyderabad", value: "H. No. 16, 9th Phase Rd, Kukatpally, 500072" },
                     { label: "Phone", value: "+91 86394 44404", href: "tel:+918639444404" },
                   ].map((item) => (
                     <div key={item.label} className="contact-info-item">
